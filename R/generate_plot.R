@@ -36,10 +36,10 @@ generate_plot <- function(df, file_name, polar, filetype, color = "black", backg
       ggplot2::theme_void() +
       ggplot2::coord_fixed() +
       ggplot2::theme(
-        panel.background = element_rect(fill = background_color),
+        panel.background = element_rect(fill = "yellow"),
         plot.background = element_rect(fill = background_color)
         )
   }
-  ggplot2::ggsave(plot, filename = paste0(IMG_PATH, file_name), width = 6, height = 6, device = filetype)
+  ggplot2::ggsave(plot, filename = paste0(IMG_PATH, file_name), width = 6, height = 6, device = filetype, dpi = 320)
   print("image saved...")
 }
